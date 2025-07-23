@@ -64,27 +64,12 @@
   },
   {
     "ContainingType": "BlogApp.Backend.Controllers.BlogPostController",
-    "Method": "GetAllBlogs",
-    "RelativePath": "api/blog/get-image",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BlogApp.Backend.Controllers.BlogPostController",
     "Method": "PostBlog",
-    "RelativePath": "api/blog/index",
+    "RelativePath": "api/blog/create-blog",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
       {
         "Name": "Title",
         "Type": "System.String",
@@ -114,6 +99,83 @@
         "Name": "Category",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApp.Backend.Controllers.BlogPostController",
+    "Method": "EditBlog",
+    "RelativePath": "api/blog/edit-blog",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubTitle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Category",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApp.Backend.Controllers.BlogPostController",
+    "Method": "GetAllBlogs",
+    "RelativePath": "api/blog/get-all-blogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApp.Backend.Controllers.BlogPostController",
+    "Method": "GetBlogByUserId",
+    "RelativePath": "api/blog/get-blog-by-userid",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApp.Backend.Controllers.CommentController",
+    "Method": "PostComment",
+    "RelativePath": "api/comment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comment",
+        "Type": "BlogApp.Backend.DTOs.Comment.CreateCommentDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

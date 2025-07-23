@@ -19,6 +19,20 @@ namespace BlogApp.Backend.Mappers
         {
             return new GetAllBlogDto()
             {
+                Id = posts.Id,
+                Title = posts.Title,
+                SubTitle = posts.SubTitle,
+                Description = posts.Description,
+                Author = posts.Author,
+                Category = posts.Category,
+                Image = posts.Image,
+            };
+        }
+        public static GetBlogPostsByUserIdDto ToGetBlogPostsByUserIdDtoFromBlogPosts(this BlogPost posts)
+        {
+            return new GetBlogPostsByUserIdDto()
+            {
+                Id = posts.Id,
                 Title = posts.Title,
                 SubTitle = posts.SubTitle,
                 Description = posts.Description,

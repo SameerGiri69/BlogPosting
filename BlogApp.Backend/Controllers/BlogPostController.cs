@@ -10,7 +10,6 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Backend.Controllers
 {
     [ApiController]
-    [Authorize]
     [Route("api/blog")]
     public class BlogPostController : ControllerBase
     {
@@ -26,21 +25,25 @@ namespace BlogApp.Backend.Controllers
             _userManager = userManager;
         }
 
-        [HttpPost("index")]
+        [HttpPost("create-blog")]
         public async Task<IActionResult> PostBlog(CreateBlogDto blogDto)
         {
-            if(!ModelState.IsValid) return BadRequest(ModelState);
-
-            var isSuccessful = await _blogPostRepository.CreateBlog(blogDto, await _userManager.GetUserAsync(User) );
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (HttpContext.User.Identity.IsAuthenticated ==  false)
+            {
+                return BadRequest("You have to login to post");
+            }
+            var isSuccessful = await _blogPostRepository.CreateBlog(blogDto, await _userManager.GetUserAsync(User));
             if (isSuccessful) return Ok("Blog created Successfully");
             return BadRequest("Something went wrong contact admin please");
         }
-        [HttpGet("get-image")]
+        [HttpGet("get-all-blogs")]
         public async Task<IActionResult> GetAllBlogs()
         {
             var posts = await _blogPostRepository.GetAllBlogs();
             var response = posts.Select(post => new
             {
+                Id = post.Id,
                 Title = post.Title,
                 SubTitle = post.SubTitle,
                 Description = post.Description,
@@ -50,6 +53,24 @@ namespace BlogApp.Backend.Controllers
             });
             return Ok(response);
         }
-    }
+        [HttpPut("edit-blog")]
+        public async Task<IActionResult> EditBlog(EditBlogPostDto dto, int id)
+        {
+            if (!ModelState.IsValid) return BadRequest();
+            var result = await _blogPostRepository.EditBlog(dto, id);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            return BadRequest("Please change something for a update");
+        }
+        [HttpGet("get-blog-by-userid")]
+        public async Task<IActionResult> GetBlogByUserId()
+        {
+            var userBlogs = await _blogPostRepository.GetBlogPostsByUserId(await _userManager.GetUserAsync(User));
+            return Ok(userBlogs);
+        }
+
+}
 }
 

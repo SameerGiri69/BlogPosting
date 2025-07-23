@@ -34,15 +34,60 @@ namespace BlogApp.Backend.Repository
             return await SaveAsync();
         }
 
+        public async Task<BlogPost> EditBlog(EditBlogPostDto updatedBlog, int blogId)
+        {
+            var existingBlog = await _context.BlogPost.FindAsync(blogId);
+            if (existingBlog == null)
+            {
+                return null; // Blog not found
+            }
+            existingBlog.Title = updatedBlog.Title ?? existingBlog.Title;
+            existingBlog.SubTitle = updatedBlog.SubTitle ?? existingBlog.SubTitle;
+            existingBlog.Description = updatedBlog.Description ?? existingBlog.Description;
+            existingBlog.Category = updatedBlog.Category ?? existingBlog.Category;
+            if (updatedBlog.Image != null)
+            {
+                // Example: Assume Image is stored as a byte array or path in the database
+                using (var memoryStream = new MemoryStream())
+                {
+                    await updatedBlog.Image.CopyToAsync(memoryStream);
+                    existingBlog.Image = memoryStream.ToArray(); // If storing the image as bytes
+                }
+            }
+            var rowsAffected = _context.SaveChanges();
+            if(rowsAffected > 0)
+            {
+                return existingBlog;
+            }
+            return null;
+        }
+
         public async Task<List<GetAllBlogDto>> GetAllBlogs()
         {
-            var blogList = await _context.BlogPost.ToListAsync();
-            var mapped = new List<GetAllBlogDto>();
-            foreach (var blog in blogList)
+            var blogList = await _context.BlogPost.Select(blog => new GetAllBlogDto
             {
-                mapped.Add(blog.ToGetAllBlogDtoFromBlogPost());
-            }
-            return mapped;
+                Id = blog.Id,
+                Title = blog.Title,
+                SubTitle = blog.SubTitle,
+                Description = blog.Description,
+                Author = blog.Author,
+                Image = blog.Image,
+                Category = blog.Category
+            }).ToListAsync();
+            return blogList;
+        }
+
+        public async Task<List<GetBlogPostsByUserIdDto>> GetBlogPostsByUserId(AppUser currUser)
+        {
+
+                var userBlogs = await _context.BlogPost.Where(x => x.AppUser == currUser).Select(post => new GetBlogPostsByUserIdDto
+                {
+                    Id = post.Id,
+                    Title = post.Title,
+                    Description = post.Description,
+                    Author = post.Author,
+                }).ToListAsync();
+            return userBlogs;
         }
 
         public async Task<bool> SaveAsync()

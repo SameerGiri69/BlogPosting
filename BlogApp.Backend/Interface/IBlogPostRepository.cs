@@ -8,6 +8,8 @@ namespace BlogApp.Backend.Interface
         public Task<bool> CreateBlog(CreateBlogDto create, AppUser curruser);
         public Task<List<GetAllBlogDto>> GetAllBlogs();
         public Task<bool> SaveAsync();
+        public Task<BlogPost> EditBlog(EditBlogPostDto edit, int id);
+        public Task<List<GetBlogPostsByUserIdDto>> GetBlogPostsByUserId(AppUser curruser);
 
     }
 }

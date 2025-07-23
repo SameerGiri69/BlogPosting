@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|c:\\users\\hogrider\\source\\repos\\blogapp.backend\\blogapp.backend\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|solutionrelative:blogapp.backend\\controllers\\blogpostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|c:\\users\\hogrider\\source\\repos\\blogapp.backend\\blogapp.backend\\repository\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|solutionrelative:blogapp.backend\\repository\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|c:\\users\\hogrider\\source\\repos\\blogapp.backend\\blogapp.backend\\repository\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|solutionrelative:blogapp.backend\\repository\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|c:\\users\\hogrider\\source\\repos\\blogapp.backend\\blogapp.backend\\interface\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|solutionrelative:blogapp.backend\\interface\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|c:\\users\\hogrider\\source\\repos\\blogapp.backend\\blogapp.backend\\mappers\\blogmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|solutionrelative:blogapp.backend\\mappers\\blogmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|c:\\users\\hogrider\\source\\repos\\blogapp.backend\\blogapp.backend\\interface\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D9F0239-CDEB-40E7-9D18-5A1EE060C97C}|BlogApp.Backend\\BlogApp.Backend.csproj|solutionrelative:blogapp.backend\\interface\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,48 +44,35 @@
               "RelativeDocumentMoniker": "BlogApp.Backend\\Mappers\\BlogMapper.cs",
               "ToolTip": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Mappers\\BlogMapper.cs",
               "RelativeToolTip": "BlogApp.Backend\\Mappers\\BlogMapper.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T15:22:55.469Z",
+              "WhenOpened": "2025-07-21T05:51:30.168Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BlogPostController.cs",
-              "DocumentMoniker": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Controllers\\BlogPostController.cs",
-              "RelativeDocumentMoniker": "BlogApp.Backend\\Controllers\\BlogPostController.cs",
-              "ToolTip": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Controllers\\BlogPostController.cs",
-              "RelativeToolTip": "BlogApp.Backend\\Controllers\\BlogPostController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwDMAAAAgAAAAAAAAAA==",
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Repository\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "BlogApp.Backend\\Repository\\CommentRepository.cs",
+              "ToolTip": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Repository\\CommentRepository.cs",
+              "RelativeToolTip": "BlogApp.Backend\\Repository\\CommentRepository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwDkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T15:15:02.556Z",
+              "WhenOpened": "2025-07-21T05:37:43.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BlogPostRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Repository\\BlogPostRepository.cs",
-              "RelativeDocumentMoniker": "BlogApp.Backend\\Repository\\BlogPostRepository.cs",
-              "ToolTip": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Repository\\BlogPostRepository.cs",
-              "RelativeToolTip": "BlogApp.Backend\\Repository\\BlogPostRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAYwCoAAAA9AAAAAAAAAA==",
+              "Title": "ICommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Interface\\ICommentRepository.cs",
+              "RelativeDocumentMoniker": "BlogApp.Backend\\Interface\\ICommentRepository.cs",
+              "ToolTip": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Interface\\ICommentRepository.cs",
+              "RelativeToolTip": "BlogApp.Backend\\Interface\\ICommentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T15:11:31.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IBlogPostRepository.cs",
-              "DocumentMoniker": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Interface\\IBlogPostRepository.cs",
-              "RelativeDocumentMoniker": "BlogApp.Backend\\Interface\\IBlogPostRepository.cs",
-              "ToolTip": "C:\\Users\\hogrider\\source\\repos\\BlogApp.Backend\\BlogApp.Backend\\Interface\\IBlogPostRepository.cs",
-              "RelativeToolTip": "BlogApp.Backend\\Interface\\IBlogPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T13:32:51.265Z",
+              "WhenOpened": "2025-07-17T09:40:29.716Z",
               "EditorCaption": ""
             }
           ]
